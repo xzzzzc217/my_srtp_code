@@ -1,3 +1,4 @@
+#本代码可用于arduino uno板子的发射端代码
 #include <SPI.h>
 #include <LoRa.h>
 
