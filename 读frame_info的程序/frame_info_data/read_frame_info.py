@@ -1,0 +1,16 @@
+import struct
+
+# 文件路径
+frame_info_filepath = "1"  # 替换为你的文件路径
+
+# 读取二进制文件
+with open(frame_info_filepath, "rb") as f:
+    data = f.read(3 * 8)  # 读取 3 个 double，每个 double 8 字节
+
+# 解析二进制数据
+quarter_index, temp_index, m_cfo = struct.unpack("ddd", data)
+
+# 输出解析后的数据
+print(f"quarter_index: {quarter_index}")
+print(f"temp_index: {temp_index}")
+print(f"cfo: {m_cfo}")
